@@ -153,7 +153,7 @@ function setRanVoc(){
             })
         }
         else{
-            if(lang == "e"){
+            if(lang == "f"){
                 ranVocIndex = Math.floor(Math.random() * vocsLength); 
                 ranVoc = Object.keys(vocs)[ranVocIndex];
             }
@@ -226,4 +226,5 @@ function startTrainer(){
 function changeLanguage(){
     lang = lang == "d" ? "f": "d";
     changeLangBtn.textContent = lang == "d" ? "Französisch -> Deutsch": "Deutsch -> Französisch";
+
 }
