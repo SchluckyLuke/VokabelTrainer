@@ -163,7 +163,6 @@ function setRanVoc(){
             }
         }
     }while(vocsUsed.includes(ranVoc) && vocsUsed.length != vocsLength);
-    vocsUsed.push(ranVoc);
 
     translateVoc.textContent = ranVoc;
 
@@ -183,6 +182,7 @@ function checkVoc(){
         if(enterVocInput.value == vocs[ranVoc]){
             returnChecked.textContent = "Richtig!";
             returnChecked.classList.add("right");
+            vocsUsed.push(ranVoc);
         }
         else{
             returnChecked.textContent = "Falsch...";
@@ -194,6 +194,7 @@ function checkVoc(){
         if(enterVocInput.value == getKeyByValue(vocs, ranVoc)){
             returnChecked.textContent = "Richtig!";
             returnChecked.classList.add("right");
+            vocsUsed.push(ranVoc);
         }
         else{
             returnChecked.textContent = "Falsch";
@@ -228,3 +229,4 @@ function changeLanguage(){
     changeLangBtn.textContent = lang == "d" ? "Französisch -> Deutsch": "Deutsch -> Französisch";
 
 }
+
