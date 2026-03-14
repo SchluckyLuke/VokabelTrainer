@@ -6,117 +6,24 @@ const returnRightAnswer = document.getElementById("returnRightAnswer");
 let lang = "f";
 
 let vocs = {
-    "la pi\u00e8ce": "das Zimmer", 
-    "la chambre": "das Schlafzimmer", 
-    "la cuisine": "die K\u00fcche", 
-    "la salle \u00e0 manger": 
-    "das Esszimmer", 
-    "la salle de bains": 
-    "das Badezimmer", 
-    "les toilettes": "die Toilette", 
-    "le bureau": "das Arbeitszimmer,\nauch: der Schreibtisch", 
-    "le garage": "die Garage", 
-    "le salon": "das Wohnzimmer", 
-    "le s\u00e9jour": "hier: das Wohnzimmer", 
-    "le jardin": "der Garten", 
-    "la piscine": "hier: der Swimmingpool", 
-    "la terrasse": "die Terrasse", 
-    "la chemin\u00e9e": "der Kamin", 
-    "le toit": "das Dach", 
-    "le grenier": "der Dachboden", 
-    "l'entr\u00e9e": "der Eingang, das Vorzimmer,\nauch: die Vorspeise", 
-    "le d\u00e9barras": "der Abstellraum", 
-    "la cave": "der Keller", 
-    "l'escalier": "die Treppe, die Stiege", 
-    "ranger qc.": "etw. aufraumen", 
-    "l'\u00e9vier": "die Sp\u00fcle, die Abwasch", 
-    "le canap\u00e9": "die Couch", 
-    "la machine \u00e0 laver": "die Waschmaschine", 
-    "la cuisini\u00e8re (\u00e0 gaz / \u00e9lectrique)": "der Herd (Gas-/ Elektro-)", 
-    "le fauteuil": "der (Polster-)Sessel", 
-    "le frigo": "der K\u00fchlschrank", 
-    "le porte-manteau": "der Kleiderst\u00e4nder", 
-    "le four": "der Ofen, das Backrohr", 
-    "le lavabo": "das Waschbecken", 
-    "le lave-vaisselle": "der Geschirrsp\u00fcler", 
-    "le logement": "die Unterkunft", 
-    "bruyant/-e": "laut, l\u00e4rmend", 
-    "sombre": "dunkel, finster", 
-    "tu \u00e9tais": "du warst", 
-    "si": "hier: so", 
-    "difficile": "schwierig", 
-    "la buanderie": "die Waschk\u00fcche,\nder Trockenraum", 
-    "le meuble": "das M\u00f6belst\u00fcck", 
-    "spacieux/-se": "ger\u00e4umig", 
-    "la fen\u00eatre": "das Fenster", 
-    "la lampe": "die Lampe", 
-    "le placard": "der Kasten", 
-    "la table de nuit": "das Nachtk\u00e4stchen", 
-    "au-dessus de": "\u00fcber", 
-    "le masque": "die Maske", 
-    "le tableau": "hier: das Gem\u00e4lde", 
-    "donner sur qc.": "zu etw. hin liegen,\nausgerichtet sein", 
-    "ensoleill\u00e9/-e": "sonnig", 
-    "d\u00e9m\u00e9nager": "umziehen", 
-    "l'\u00e9tag\u00e8re": "das Regal", 
-    "l'horloge": "die Uhr", 
-    "au pied de": "am Fu\u00df von", 
-    "le tapis": "der Teppich", 
-    "par terre": "am Boden", 
-    "se partager qc.": "sich etw. teilen", 
-    "l'armoire": "der Kleiderkasten", 
-    "le lit superpos\u00e9": "das Stockbett", 
-    "le rideau": "der Vorhang", 
-    "pr\u00e9parer qc.": "hier: etw. zubereiten", 
-    "nettoyer qc.": "etw. putzen, reinigen", 
-    "passer l'aspirateur": "staubsaugen", 
-    "sortir qn./qc.": "jdn./etw. hinausbringen, auch: ausgehen", 
-    "la poubelle": "der M\u00fclleimer, der Mistk\u00fcbel", 
-    "l'aide": "die Hilfe", 
-    "ne ... pas encore": "noch nicht", 
-    "(faire) sortir le chien": "mit dem Hund Gassi gehen", 
-    "la responsabilit\u00e9": "die Verantwortung", 
-    "\u00e0 part": "abgesehen von, au\u00dfer", 
-    "le travail menager": "die Hausarbeit", 
-    "une fois par": "einmal pro", 
-    "chaque": "jeder/jede/jedes", 
-    "tous/toutes": "alle, hier: jeden zweiten Tag", 
-    "arroser qc.": "etw. gie\u00dfen", 
-    "laver qc.": "etw. waschen", 
-    "la vaisselle": "das Geschirr", 
-    "le linge": "die W\u00e4sche", 
-    "repasser qc.": "etw. b\u00fcgeln", 
-    "mettre la table": "den Tisch decken", 
-    "d\u00e9barrasser la table": "den Tisch abraumen", 
-    "la vitre": "die Fensterscheibe", 
-    "faire la poussi\u00e8re": "Staub wischen", 
-    "l'animal domestique": "das Haustier", 
-    "le cochon d'Inde": "das Meerschweinchen", 
-    "le hamster": "der Hamster", 
-    "le cochon": "das Schwein", 
-    "la tortue": "die Schildkrote", 
-    "le lapin": "das Kaninchen", 
-    "la souris": "die Maus", 
-    "la poule": "die Henne", 
-    "justifier qc.": "etw. begr\u00fcnden", 
-    "lequel/laquelle": "welcher/welche/welches", 
-    "la petite annonce": "das Zeitungsinserat", 
-    "en location": "zu vermieten", 
-    "id\u00e9alement": "ideal", 
-    "plac\u00e9/-e": "hier: gelegen", 
-    "proche de": "nahe bei", 
-    "lumineux/-se": "hell", 
-    "\u00e9quip\u00e9/-e": "ausgestattet", 
-    "le parquet": "der Parkettboden", 
-    "le chauffe-serviette": "der Handtuchtrockner", 
-    "s\u00e9par\u00e9/-e": "getrennt", 
-    "la place de parking": "der Parkplatz", 
-    "le sous-sol": "das Untergeschoss", 
-    "la r\u00e9sidence": "hier: die Wohnanlage", 
-    "r\u00e9cent/-e": "hier: neu", 
-    "le commerce": "hier: das Gesch\u00e4ft", "\u00e0 proximit\u00e9 (de)": "in der Nahe von", "l'\u00e9tage": "das Stockwerk", "r\u00e9nov\u00e9/-e": "renoviert", "\u00eatre situ\u00e9/-e": "gelegen sein", "agr\u00e9able": "angenehm", "comprendre qc.": "hier: bestehen aus", "la cuisine am\u00e9nag\u00e9e": "die Einbauk\u00fcche", "le balcon": "der Balkon", "disposer de qc.": "\u00fcber etw. verf\u00fcgen", "meubl\u00e9/-e": "m\u00f6bliert", "le plafond": "die Decke (eines Zimmers)", "compos\u00e9/-e de": "bestehend aus", "dont": "hier: wovon", "ouvert/-e": "offen", "avoir besoin de qc.": "etw. brauchen", "vendre qc.": "etw. verkaufen", "louer qc.": "etw. mieten, vermieten", "immobilier/-\u00e8re": "Immobilien-", "le m\u00e8tre carr\u00e9": "der Quadratmeter", "le rez-de-chauss\u00e9e": "das Erdgeschoss", "l'affiche": "das Plakat, das Poster", "le coussin": "der Polster", "se maquiller": "sich schminken", "l'appart": "die Wohnung", "le probl\u00e8me": "das Problem", "le secret": "das Geheimnis", "la naissance": "die Geburt", "moderniser qc.": "etw. modernisieren", "\u00e0 l'int\u00e9rieur (de)": "im Inneren, innen", "le confort": "der Komfort", "enlever qc.": "etw. entfernen, auch: ein\nKleidungsst\u00fcck ausziehen", "le mur": "die Wand, die Mauer", "monter": "hinaufgehen, auch: einsteigen", "garder qc.": "bewahren, auch: halten", "en m\u00eame temps": "zur gleichen Zeit", "la queue": "die Warteschlange", "am\u00e9nager qc.": "etw. einrichten, ausstatten,\n\nl'am\u00e9nagement (m.)\n\nauch: umbauen", "le d\u00e9sordre": "die Unordnung", "la chambre d'amis": "das G\u00e4stezimmer", "\u00e0 deux pas": "wenige Schritte entfernt", "chacun/-e": "jeder/jede", "la part": "der Teil", "remplir qc.": "etw. f\u00fcllen", "vider qc.": "etw. leeren", "s'occuper de qc.": "sich um etw. k\u00fcmmern", "le sol": "der Boden", "rare": "selten", "\u00e9tendre qc.": "hier: etw. aufh\u00e4ngen", "d'un autre c\u00f4t\u00e9": "andererseits", "le bricolage": "das Heimwerken", "la facture": "die Rechnung", "le caddie": "der Einkaufswagen", "le retour": "hier: der R\u00fcckweg", "emmener qn.": "jdn. mitnehmen, hinbringen", "accompagner qn./qc.": "jdn./etw. begleiten", "le/la femme m\u00e9decin": "der/die Arzt/\u00c4rztin", "le/la dentiste": "der/die Zahnarzt/Zahn\u00e4rztin", "la vue": "die Aussicht", "la localisation": "hier: die Lage", 
-    "autrefois": "fr\u00fcher, einst", "jouer \u00e0 chat": "Katz und Maus spielen", "jouer \u00e0 cache-cache": "Verstecken spielen", "le terrain de jeux": "der Spielplatz", "le conte de f\u00e9es": "das M\u00e4rchen", "la danse": "der Tanz", "Jeannot et Margot": "H\u00e4nsel und Gretel", "dehors": "drau\u00dfen", "en revanche": "dagegen, hingegen", "le truc": "das Ding", "le souvenir": "die Erinnerung", "l'enfance": "die Kindheit", "se souvenir de qc./qn.": "sich an etw./jdn. erinnern", "se rappeler qc./qn.": "sich an etw./jdn. erinnern", "marcher": "hier: laufen", "le/la chanteur/-se": "der/die S\u00e4nger/-in", "\u00e9norm\u00e9ment": "hier: sehr viel", "emprunter qc.": "etw. ausleihen", "municipal/-e": "Stadt-, Gemeinde-", "recevoir qc.": "etw. erhalten", "Tintin et Milou": "Tim und Struppi", "l'abonnement": "das Abonnement", "le r\u00e9cit": "der Bericht", "exotique": "exotisch", "la pens\u00e9e": "das Denken, die Gedanken,auch: der Geist", "P\u00e2ques": "Ostern, das Osterfest", "les environs": "die Umgebung", "\u00e0 l'\u00e9poque": "damals, einst", "le bac": "die Matura", "la bande": "hier: die Gruppe", "profiter de qc.": "von etw. profitieren", "la jeunesse": "die Jugend", "depuis que": "seit", "de temps en temps": "von Zeit zu Zeit, auch: ab und zu", "continuer a faire qc.": "hier: weiterhin machen", "la feuille": "das Blatt", "jouer aux gendarmes et aux voleurs": "R\u00e4uber und Gendarm spielen", "le/la voleur/-se": "der/die Dieb/-in", "avoir froid": "frieren", "se reposer": "sich entspannen", "d\u00e9tendu/-e": "entspannt", "s'arr\u00eater": "stehen bleiben", "tout de suite": "sofort", "ouvrir qc.": "etw. \u00f6ffnen", "quand m\u00eame": "trotzdem", "\u00e0 ce moment(-l\u00e0)": "in dem Augenblick", "le/la prince/-sse": "der/die Prinz/-essin", "la rencontre": "das Treffen, die Begegnung", "la star": "der Star", "l'accident": "der Unfall", "le personnage": "die Figur, die Person", "se connaitre": "sich kennen (lernen)", "chasser qn./qc.": "jdn./etw. jagen", "le sanglier": "das Wildschwein", "tomber amoureux/-se de qn.": "sich in jdn. verlieben", "le/la fianc\u00e9/-e": "der/die Verlobte/-r", "entre les mains de qn.": "in der Gewalt von jdm.", "le/la Romain/-e": "der/die Romer/-in", "le photomaton": "der Passbildautomat", "jeter qc": "etw. wegwerfen, werfen", "un tas de qc.": "eine Menge an/von", "collectionner qc.": "etw. sammeln", "la recherche": "die Suche", "ne ... plus": "nicht mehr", "l'un apres l'autre": "eine/-r nach dem/der anderen", "des": "ab, seit", "l'instant": "der Augenblick", "sauver qn.": "jdn. retten", "en fait": "eigentlich", "la plan\u00e8te": "der Planet", "extraordinaire": "au\u00dfergew\u00f6hnlich", "ressembler \u00e0 qn.": "jdm. \u00e4hneln", "le baobab": "der Affenbrotbaum", "remarquer qc.": "etw. bemerken", "meme si": "auch wenn", "ne ... rien": "nichts", "monstrueux/-se": "ungeheuerlich", "la sc\u00e8ne": "die Buhne, auch: die Szene", "amuser qn.": "jdn. unterhalten", "enlever qn": "hier: jdn. entf\u00fchren", "le soldat": "der Soldat", "le monstre": "das Ungeheuer", "humilier qn.": "jdn. dem\u00fctigen", "malheureux/-se": "ungl\u00fccklich", "la pierre": "der Stein", "avoir piti\u00e9 de qn.": "mit jdm. Mitleid haben", "l'utilisation": "die Verwendung", "la plupart": "die Mehrheit, die meisten", "l'explication": "die Erklarung", "le texto": "die SMS", "le/la footballeur/-se": "der/die Fu\u00dfballspieler/-in", "l'enseignant/-e": "der/die Lehrer/-in", "s'installer": "sich niederlassen,\nauch: sich setzen", "la victoire": "der Sieg", "l'\u00e9poux/-se": "der/die Ehegatte/-in", "profond/-e": "tief", "la douleur": "der Schmerz", "faire part de qc. \u00e0 qn.": "jdm. etw. mitteilen", "le d\u00e9c\u00e8s": "das Ableben", "survenu/-e": "pl\u00f6tzlich eingetreten", "le dipl\u00f4me universitaire (DU)": "das Universitatsdiplom", "g\u00e9n\u00e9ral/-e": "allgemein", "\u00e9conomique": "wirtschaftlich", "d\u00e9cerner qc. \u00e0 qn.": "etw. an jdn. verleihen", "annoncer qc. \u00e0 qn.": "etw. jdm, ankundigen", "c\u00e9l\u00e9brer qc.": "etw. feiem", "la retraite": "die Pension", "la joie": "die Freude", "prier qn. de faire qc.": "jdn. bitten etw. zu tun", "assister \u00e0 qc.": "hier: an etw. teilnehmen", "la b\u00e9n\u00e9diction nuptiale": "die kirchliche Trauung", "l'annee scolaire": "das Schuljahr", "la dent de lait": "der Milchzahn", "pourtant": "trotzdem, dennoch", "plein de": "viel", "jaloux/-se": "eifers\u00fcchtig", "devenir": "werden", "cueillir qc": "etw. pfl\u00fccken, sammeln", "la fuite": "die Flucht", "cruel/-le": "grausam", "le/la musicien/-ne": "der/die Musiker/-in", "le/la contr\u00f4leur/-se": "der/die Kontrolleur/-in", "l'ile": "die Insel", "juste": "nur, auch: gleich, knapp", "la vache": "die Kuh", "l'\u00e9crivain/-ne": "der/die Schriftsteller/-in", "studieux/-se": "flei\u00dfig, arbeitsam", "sau": "auler", "la b\u00eatise": "die Dummheit", "une fois": "einmal", "en plein air": "im Freien", "cuisiner qc.": "etw. kochen", "organis\u00e9/-e": "organisiert", "la console de jeux": "die Spielekonsole", "le centre d'int\u00e9r\u00e9t": "das Interessensgebiet", "le lac": "der See", "s'ennuyer": "sich langweilen", "Tu penses !": "Wo denkst du hin!", "se perdre de vue": "sich aus den Augen verlieren", "par contre": "dagegen, hingegen", "s\u00e9v\u00e8re": "streng", "oublier qn./qc.": "jdn./etw. vergessen", "le boulot": "die Arbeit", "le/la ch\u00e9ri/-e": "der Liebling, der Schatz", "la fac": "die Universitat", "la d\u00e9couverte": "die Entdeckung", "la libert\u00e9": "die Freiheit", "entier/-\u00e8re": "ganze/-r", "faire la connaissance de": "die Bekanntschaft mit jdm. machen", "attractif/-ve": "anziehend", "d\u00e9prim\u00e9/-e": "deprimiert", "tout \u00e0 coup": "plotzlich", "l'\u00e9picier/-\u00e8re": "der/die Lebensmittelh\u00e4ndler/-in", "apprendre qc. a qn.": "jdm. etw. beibringen", "la formation": "die Ausbildung", "le/la travailleur/-se": "der/die Arbeiter/-in", "quitter qn./qc.": "jdn./etw. verlassen", "le pays natal": "das Geburtsland", "la pauvret\u00e9": "die Armut", "construire qc.": "etw. bauen, konstruieren", "l'avenir": "die Zukunft", "en effet": "allerdings, in der Tat", "au debut": "anfangs", "avoir de la chance": "Gl\u00fcck haben", "faire des m\u00e9nages": "als Putzkraft arbeiten", "contr\u00f3ler qc.": "etw. kontrollieren", "\u00e9nerver qn.": "jdn. nerven", "le moyen": "das Mittel, der Weg", "\u00eatre fier/-\u00e8re de qn.": "stolz auf jdn. sein", "l'immigr\u00e9/-e": "der/die Zuwanderer/Zuwanderin", "national/-e": "national", "international/-e": "international", "la Coupe du Monde": "die Weltmeisterschaft", "'entra\u00eeneur/-se": "der/die Trainer/-in"
-};
+    /* "slightly": "ein bisschen", "to trust sb.": "jmdm. vertrauen", "series": "(TV-/Streaming-)Serie", "anxious": "verunsichert, nerv\u00f6s", "confident": "selbstbewusst", "to meet up with sb.": "sich mit jmdm. treffen", "to fit in (with sb.)": "hineinpassen, sich einf\u00fcgen\n(in eine Gruppe)", "to please sb.": "jmdn.zufriedenstellen,\njmdm. gefallen", "to have sth. in common with sb.": "etw. mit jmdm. gemeinsam\nhaben", "to get involved (in sth.)": "sich (auf etw.) einlassen\n(bei etw.) mitmochen,", "in return": "im Gegenzug", "point of view": "Sichtweise, Einstellung", "to take sb.'s feelings into account": "auf jmds. Gef\u00fchle R\u00fccksicht\nnehmen", "to agree on sth.": "sich auf etw. einigen", "expression": "Ausdruck, Wendung", "to keep in touch with sb.": "bleiben\nmit jmdm. in Kontakt", "to hang out with sb.": "mit jmdm. abh\u00e4ngen", "to catch up with sb.": "sich auf den neuesten\nStand bringen, mit jmdm.\nNeuigkeiten austauschen", "to turn on sb.": "sich gegen jmdn. wenden", "to let sb. down": "jmdn. entt\u00e4uschen/im Stich\nlassen", "to stand by sb.": "zu jmdm. stehen", "to calm sb. down": "jmdn. beruhigen", "to cheer sb. up": "jmdn. aufheitern", "to depend on sb.": "sich auf jmdn. verlassen", "to gossip about sb.": "\u00fcber jmdn. tratschen", "to keep a secret": "ein Geheimnis bewahren", "privacy": "Privatsph\u00e4re", "to give sb. some advice": "jmdm. einen Rat erteilen", "honest": "ehrlich", "to make/keep a promise": "ein Versprechen geben/\nhalten", "to make a fool of yourself": "sich l\u00e4cherlich machen/\nblamieren", "That's none of your business.": "Das geht dich nichts an.", "to talk sb. out of sth.": "jmdm. etw. ausreden", "to make a fuss": "machen\nein Theater/ein Getue", "to solve a problem": "ein Problem l\u00f6sen", "addicted": "abh\u00e4ngig, s\u00fcchtig", "leaflet": "Brosch\u00fcre", "to tell on sb.": "jmdn. verraten/verpetzen", "skill": "Fertigkeit, F\u00e4higkeit, Geschick", "major": "Haupt -...; wichtig; \nhier: grundlegend", "to be supportive/to support sb.": "jmdn. unterst\u00fctzen", 
+    "to put sb.'s needs before your own": "jmds. Bed\u00fcrfnisse \u00fcber die\neigenen stellen", "to go out of your way for sb.": "sich f\u00fcr jmdn. besondere\nM\u00fche geben/ins Zeug legen", "to maintain a strong bond": "eine starke Beziehung aufrechterhalten", "thoughtful": "aufmerksam, f\u00fcrsorglich", "to care for sb.": "hier: jmdn. gernhaben", "paragraph": "Absatz", "to bully sb.": "jmdn. schikanieren", "to provide sth.": "etw.zur Verf\u00fcgung stellen", "to get used to sth.": "sich an etw. gew\u00f6hnen", "hostel": "hier: Wohn-/Sch\u00fclerheim", "isle": "(kleine) Insel", "to make sb.'s life a misery": "jmdm. das Leben zur Qual \nmachen", "to board": "im Internat wohnen", "staff": "Personal, Angestellte", "to be on duty": "Dienst haben", "nightmare": "Albtraum", "to look forward to sth.": "sich auf etw. freuen", "huge": "riesig, gewaltig", "harbour": "Hafen", "dizzy": "schwindlig", "prison": "Gef\u00e4ngnis", "abroad": "im Ausland", "to imagine sth.": "sich etw. vorstellen", "school exchange": "Sch\u00fcleraustausch", "to take part in sth.": "an etw. teilnehmen", "to learn a trade": "ein Handwerk/einen Beruf \nerlernen", "given name": "Vorname", "to work in medicine": "im medizinischen Bereich\narbeiten", "acquaintance": "Bekannte/r", "couple": "Paar", "enemy": "Feind/in", "bride/groom": "Braut/Br\u00e4utigam", "mate": "Kumpel, Freund/in", "pal": "Kumpel, Freund/in", "relative": "Verwandte/r", "sibling": "Geschwister", "stranger": "Fremde/r", "to get to know about sth.": "\u00fcber etw. erfahren,\netw. kennenlernen", "to look similar": "\u00e4hnlich aussehen", "rather": "ziemlich, eher", "quite": "ziemlich", "employee": "Angestellte/r, \nArbeitnehmer/in", "to grab sth.": "sich etw. schnappen", "behaviour": "Verhalten", "current": "momentan, aktuell", "choice": "Entscheidung, (Aus-)Wahl", "grateful": "dankbar", "reliable": "verl\u00e4sslich, zuverl\u00e4ssig", "kind": "liebensw\u00fcrdig, freundlich", "patient": "geduldig", "to reflect on sth.": "\u00fcber etw. nachdenken/reflektieren", "to take a look at sth.": "sich etw. ansehen", "challenge": "Herausforderung",
+    "bar chart": "Balken-/S\u00e4ulendiagramm", "to publish sth.": "etw.ver\u00f6ffentlichen/\nherousbringen", "leisure activity": "Freizeitbesch\u00e4ftigung", "u sed to do sth.": "etw. fr\u00fcher (in der\nVergangenheit)\ngetan haben", "to relax": "(sich) entspannen", "to affect sb./sth.": "sich auf jmdn./etw.\nauswirken", "time off": "Auszeit, Freizeit", "random": "wah llos, willk\u00fcrlich", "to sleep in": "(sich) ausschlafen", "to listen in on sb.": "jmdn. belauschen", "to comp lain about sth.": "sich \u00fcber etw. beschweren", "to wonder": "sich fragen", "move": "hier: (Schach-)Zug", "to be/get distracted": "abgelenkt werden", "to give sb. dark looks": "jmdn. b\u00f6se anschouen", "to lose focus": "die Konzentration verlieren", "knowledge": "Wissen", "equipment": "Ausr\u00fcstung", "expertise": "Sochkenntnis, Kompetenz", "prompt": "Aufgabenstellung, Hinweis,\nAnleitung", "challenging": "herousfordernd", "punting": "Stechkahn fahren", "to get stuck": "feststecken", "mud": "Schlamm", "to let go of sb./sth.": "jmdn./etw. loslassen", "to rescue sb.": "jmdn. retten", "by the time": "hier: als", "to reach sb./sth.": "jmdn./etw. erreichen", "to slide down": "herun terrutschen", "to notice sth.": "etw. bemerken", "to keep sth. in mind": "etw. bedenken", "to get/catch sb.'s attention": "jmds. Aufmerksamkeit\nerregen", "to give sth. a personal touch": "etw.eine pers\u00f6n liche Note\nverleihen", "silent": "still; stumm", "ill": "krank", "on special occasions": "zu besonderen Anldssen", "diet": "Ern\u00e4hrung(sweise)", 
+    "after-school dub": "freiwilliger Nachmittagsunterricht", "a wide range of": "eine gro\u00dfe Auswahl von,\nein breites Spektrum an", "robotics": "Robotertechnik", "foreground/background": "Vordergrund/Hintergrund", "upper/lower/left/right comer": "obere/untere/linke/rechte\nEcke", "to appear": "oussehen, scheinen", "focused": "konzentriert", "cheerful": "fr\u00f6hlich, heiter", "pleased": "zufrieden, erfreut", "to sponsor sb./sth.": "jrndn./etw. sponsern", "to make use of sth.": "von etw. Gebrauch machen", "panel discussion": "Podiumsdiskussion", "representative": "Vertreter/in", "to suggest sth.": "etw. vorschlogen", "benefit": "Nutzen, Vorteil", "athletics": "Leichtathletik", "STEM: science, technology, engineering, mathematics": "MINT (Mathematik, Infarmatik, Naturwissenschaften, Technik)", "to be in favour of sth.": "f\u00fcr etw. sein", "expected": "erwartet", "experience": "Erfohrung, Erlebnis", "to concentrate on sth.": "sich auf etw. konzentrieren", "satisfying": "zufriedenstellend,\nbefriedigend", "importance": "Wichtigkeit", "percentage": "Prozentanteil", "to be allowed to do sth.": "etw. d\u00fcrfen; es ist einem\nerlaubt, etw. zu tun", "entertoinment": "Unterhaltung: \nUnterhaltungs -...", "device": "Ger\u00e4t", "in fact": "sogar, genau genommen,\ntats\u00e4chlich", "to examine sth.": "etw. untersuchen", "among": "unter", "on average": "im Durchschnitt", "at least": "mindestens", "source": "Quelle", "to inspire sb.": "imdn. inspirieren", "increasingly": "zunehmend", "significant": "wichtig, signifikant", "to run an errand": "eine Besorgung machen,\netw. erledigen", "figure": "Zahl, Betrag, Wert", "to socialise (with sb.)": "mit jmdm. Kontakt kn\u00fcpfen/pflegen", "to improve sth.": "etw. verbessern", "exhibition": "Ausstellung",
+    "to sort sth.": "etw. sortieren/einordnen", "caption": "Bildtext, Bildunterschrift", "to make fun of sb./sth.": "sich \u00fcber jmdn./etw. lustig\nmachen", "point": "Pointe, Sinn", "I don't get it.": "Ich versteh's/kapier's nicht.", "to have a bigger say about sth.": "bei etw. ein gr\u00f6\u00dferes\nMitspracherecht haben", "outdated": "\u00fcberhalt, veraltet", "primary school": "Volksschule", "essential": "essenziell, wesentlich", "strict": "streng", "understanding": "verst\u00e4ndnisvoll", "punctual": "p\u00fcnktlich", "to argue sth.": "etw. begr\u00fcnden", "besides": "au\u00dferdern, \u00fcberdies", "for instance": "zum Beispiel", "whether": "ob", "to go along with sb./sth.": "jmdm./etw. zustimmen,\nmit etw. einhergehen", "link": "Verbindung", "mostly": "haupts\u00e4chlich, meistens", "to consist of sth.": "aus etw. bestehen", "therefore": "deshalb, deswegen", "to require sb. to do sth.": "etw. von jmdm. verlangen", "no matter how/who/what/ ...": "egal, wie/wer/was ...", "to show (sth.) off": "angeben (mit etw.)", "to go together": "zusammenpassen", "to punish": "bestrafen", "to expect sb. to do sth.": "von jmdm. erwarten,\netw. zu tun", "to ha ve access to sth.": "Zugang zu etw.haben", "to comment on sth.": "etw. kommentieren, einen\nKommentar zu etw.\nabgeben", "o come across sth.": "auf etw sto\u00dfen,\n\u00fcber etw. stolpem", "to throw the dice": "w\u00fcrfeln", "to toke turns doing sth.": "sich bei etw. abwechse ln,\netw. obwechseind tun", "IT: information \ntechnology": "Informatik", "equipment": "Ausstottung, Ausr\u00fcstung", "fleld trip": "Exkursion", "appearance": "Ausschen", "a handsome man": "ein gutaussehender Mann", "cute": "s\u00fc\u00df, niedlich", "chubby": "pummelig, dicklich", "frai": "gebrechlich, schwach", "easy-going": "locker, unkompliziert", "rude": "unh\u00f6flich", "bossy": "herrisch, rechthaberisch", "brave": "mutiq", "mean": "gemein", "nasty": "scheu \u00dflich; fies", "selfish": "egoistisch", "outgoing": "kontaktfreudig,\naufgeschlossen", "bad-tempered": "\u00fcbellaunig, grantig", "proud": "stolz", "disappointed": "enttduscht", "helpless": "hilflos", "furious": "zornig, rasend", "to be fed up with sth.": "etw. satthaben,\nvon etw. die Nase\nvoll haben", "annoyed": "ver\u00e4rgert, genervt", "frightened": "ver\u00e4ngstigt", "terrifled": "sehr verdngstigt", "quality": "Eigenschaft, Beschaffenheit, Qualit\u00e4t", "valuable": "wertvoll", "useless": "nutzlos", "disgusting": "ekehaft", "mute": "stumm", 
+    "freezing": "eiskalt", "chill": "frisch, k\u00fchl", "ancient": "antik, (ur)alt", "old-fashioned": "altmodisch", "to attend sth.": "etw. besuchen,\nan etw. teilnehmen", "to save/share a file": "eine Datei abspeichern/\nteilen", "to reboot the computer": "den Computer neu starten", "to mute/unmute the microphone": "Das Mikrophon ein-/ausschalten", "to flx. sth.": "etw. beheben/reparieren/\nin Ordnung bringen", "flickering": "flimmemd, flackernd", "to blur the background": "den Hintergrund\nunkenntlich machen", "absolutely": "vollkommen, total (zur\nVerst\u00e4rkung der Aussage)", "not at all": "\u00fcberhaupt nicht", "hardly": "koum", 
+    "such a ... / such an ...": "so ein/e ... , solch ein/e ...", "education": "Bildung, Ausbildung", "curriculum": "Lehrplan", "to be divided into sth": "in etw. aufgeteilt/unterteilt \nsein", "secondary school": "Mittelschule, Oberstufe", "form": "Klasse, Jahrgang", "depending on ...": "abh\u00e4ngig von ... , je nach ...", "law": "Rechtswissenschaft, Jus; \nGesetz, Recht", "politics": "hier: politische Bildung", "entrance exam": "Aufnahmepr\u00fcfung", "confusing": "verwirrend", "boarding school": "Internat", "regulation": "Vorschrift", "elementary school": "Volksschule", "high school": "Mittelschule, Oberstufe", "grade": "ahrgang, Klasse, Schulnote", "in addition to sth.": "neben etw. zus\u00e4tzlich zu \netw.", "core su bject": "Kernfach, Hauptfach", "sociol studies": "Sozialkunde", "optional": "wahlweise, freiwillig", "elective": "Wah Ifach/Wahlpflichtfach", "apart from sth.": "abgesehen von etw.", "extracurricular activity": "unverbindliche \u00dcbung", "debating dub": "Debattierklub", "track and fleld": "Leichtathletik", "to graduate": "seinen Abschluss machen", "SAT: Scholastic Aptitude/Assessment Test": "Studienberechtigungs-pr\u00fcfung (in den USA)", "politician": "Politiker/in", "to compete with sb.": "sich mit jmdm. messen,\nmit jmdm. konkurrieren/\nin Wettbewerb treten", "preparation": "Vorbereitung", "former": "ehemalige/r/s", "to instruct sb.": "jmdn.unterweisen/\nausbilden", "to register sb./sth.": "jmdn./etw. eintragen/\n(an)melden", "to be absent": "feh len, abwesend sein", "researcher": "Forscher/in", "to receive sth.": "etw. erhalten", "to lead sth.": "etw. onf\u00fchren/leiten", "to develop sth.": "etw. entwickeln", "keen": "begeistert, leidenschoftlich", "to do some revision": "den (Lern-)Stoff\nwiederholen", "to achieve sth.": "etw. erreichen", "comparatively large": "vergleichsweise gro\u00df", "in one go": "auf einmal, auf einen Sitz", "to limit sth.": "etw. beschr\u00e4nken", "stem": "(Wort-)Stamm", "educational": "Bildungs -...; schulisch; \nerzieherisch", "to qualify (for sth.)": "sich (f\u00fcr etw.) qualifizieren", "vocational school": "berufsbildende Schule", "comprehensive school": "Gesamtschule (ab 11 Jahren)", "selecti ve school": "Schule, die ihre Sch\u00fcler/-\ninnen ausw\u00e4hlen kann", "caretaker/janitor": "Housmeister/in", 
+    "headteacher/principal": "Direktor/in", "form teacher/homeroom": "Klassenvorstand/Klassenvorst\u00e4ndin", "to cram for an exam": "f\u00fcr eine Pr\u00fcfung b\u00fcffeln/\npauken", "to revise for an exam": "f\u00fcr eine Pr\u00fcfung lernen", "to pass a test/an exam": "einen Test/eine Pr\u00fcfung\nbestehen", "to take an exam": "eine Pr\u00fcfung machen", "to sign up for sth.": "sich f\u00fcr etw. anmelden", "hard-working": "flei\u00dfig", "ambitious": "ehrgeizig", "responsible": "hier: verantwortungs-\nbewusst", "to be eager to leam": "wissbegierig sein", "capable": "f\u00e4hig, kompetent" */
+
+    // "schola": "Schule", "disc\u00edpulus": "Sch\u00fcler", "esse": "sein", "disc\u00edpula": "Sch\u00fclerin", "et": "und, auch", "am\u0101re": "lieben", "intr\u0101re": "eintreten", "cl\u0101m\u0101re": "rufen, schreien", "puella": "M\u00e4dchen", "salv\u0113!/ salv\u0113te!": "sei/seid gegr\u00fc\u00dft!", "magistra": "Lehrerin", "gaud\u0113re": "sich freuen", "vid\u0113re": "sehen", "am\u012bca": "Freundin", "h\u012bc": "hier", "novus,-a,-um": "neu, jung", "n\u014dn": "nicht", "sed": "aber, (nach Verneinung) sondern", "spect\u0101re": "betrachten, schauen", "s\u014dlum": "nur", "mon\u0113re": "(er)mahnen, warnen", "err\u0101re": "(sich) irren", "h\u016bm\u0101nus,-a,-um": "menschlich", "tac\u0113re": "schweigen", "bonus,-a,-um, b\u011bn\u011b": "gut", "ibi": "dort", "rid\u0113re": "lachen, auslachen", "filia": "Tochter", "satis": "genug", "\u00edterum": "wieder, ein zweites Mal", "val\u0113!/ val\u0113te!": "leb/lebt wohl!", "respond\u0113re": "antworten"
+
+}
+
+for(let i = 0; i <= localStorage.length; i++){
+    vocs[localStorage.key(i)] = localStorage.getItem(localStorage.key(i));
+}
+delete vocs.null;
+console.log(vocs);
 
 let vocsUsed = []
 
@@ -140,11 +47,11 @@ function onEnterNext(event){
 
 function setRanVoc(){
     // Zufälligen Key auswählen
-    document.removeEventListener("keydown", onEnterNext);
     document.removeEventListener("keydown", onEnterCheck);
     do{
         if(vocsUsed.length >= vocsLength){
             document.body.innerHTML = "FERTIG!";
+            document.body.style.color = "white";
             vocsUsed = [];
             document.addEventListener("keydown", event => {
                 if(event.key == "Enter"){
@@ -201,14 +108,22 @@ function checkVoc(){
             returnRightAnswer.textContent = getKeyByValue(vocs, ranVoc);
             returnChecked.classList.add("wrong");
         }
+        
     }
-    document.removeEventListener("keydown", event => {
-        if(event.key == "Enter"){
-            checkVoc();
+
+    function skipVoc(event){
+        if(event.key === "ArrowRight"){
+            vocsUsed.push(ranVoc);
+            setRanVoc();
         }
-    });
+        else if(event.key === "Enter"){
+            setRanVoc();
+        }
+        document.removeEventListener("keydown", skipVoc)
+    }
+
     document.removeEventListener("keydown", onEnterCheck);
-    document.addEventListener("keydown", onEnterNext);
+    document.addEventListener("keydown", skipVoc);
 }
 
 function beforeSetRanVoc(){
@@ -227,6 +142,4 @@ function startTrainer(){
 function changeLanguage(){
     lang = lang == "d" ? "f": "d";
     changeLangBtn.textContent = lang == "d" ? "Französisch -> Deutsch": "Deutsch -> Französisch";
-
 }
-
